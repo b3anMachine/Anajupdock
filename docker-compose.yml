@@ -6,7 +6,9 @@ services:
     ports:
       - "8888:8888"
     command: bash -c "
-      conda install jupyter -y --quiet
+      pip install torch
+      && pip install torchvision
+      && conda install jupyter -y --quiet
       && conda install jupyter -y --quiet 
       && mkdir -p /opt/notebooks
       && jupyter notebook 
