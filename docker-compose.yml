@@ -8,8 +8,11 @@ services:
     command: bash -c "
       pip install torch
       && pip install torchvision
+      && pip install tensorflow
+      && pip install keras
       && conda install jupyter -y --quiet
       && conda install jupyter -y --quiet 
+      && conda install -c conda-forge jupyter_contrib_nbextensions
       && mkdir -p /opt/notebooks
       && jupyter notebook 
       --notebook-dir=/opt/notebooks --ip='*' --port=8888 
